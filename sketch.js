@@ -5,29 +5,43 @@ let width = innerWidth;
 let height = innerHeight;
 let asteroids = [];
 let lasers = [];
-let score = 0;
+let score = 1000;
 let gameState = false;
+let asteroidSpawner;
+let dom;
+let html;
+let body;
+
 
 function preload() {
     shipImg = loadImage('./images/ship.png');
 }
 
 function setup() {
-    gameState = true;
-   createCanvas(width, height);
+    body = document.getElementsByTagName('body')[0];
+    html = document.getElementsByTagName("HTML")[0];
+    html.style.overflow = 'hidden';
+
+   gameState = true;
+   createCanvas(innerWidth, innerHeight);
    ship = new Ship();
+   dom = new Dom();
    for(let i = 0; i < 10; i++){
-    asteroids.push(new Asteroid());
+      asteroids.push(new Asteroid());
    }
 
-   let asteroidSpawner = setInterval(()=>asteroids.push(new Asteroid()), 10000);
+   let scoreContainer = createElement('div');
+   scoreContainer.class('score-container');
+   let scoreElement = createElement('p');
+   scoreElement.class('score');
+   scoreElement.parent(scoreContainer);
+
+   asteroidSpawner = setInterval(()=>asteroids.push(new Asteroid()), 10000);
 }
 
 
 function draw(){
-    if(!gameState){
-        return;
-    }
+
     background('#030c1b');
 
     for(let i=0; i < asteroids.length; i++){
@@ -36,12 +50,20 @@ function draw(){
         asteroids[i].edges();
 
 
+        if(!gameState){
+           continue;
+        }   
+
         if(ship.hits(asteroids[i])){
-            endGame();
-            return;
+            ship = null;
+            gameState = false;
+            clearInterval(asteroidSpawner);
+            dom.createScoreBar();
         }
 
     }
+
+
 
     for(let i=0; i < lasers.length; i++){
         lasers[i].render();
@@ -64,17 +86,17 @@ function draw(){
         }
     }
 
+    if(!gameState){
+         return;
+      }
+
     ship.render();
     ship.turn();
     ship.update();
     ship.edges();
 
 
-    let scoreContainer = createElement('div');
-    createElement.class('score-container');
-    let scoreElement = createElement('p');
-    scoreElement.class('score');
-    scoreElement.parent(scoreContainer);
+
 }
 
 function keyReleased(){
@@ -110,16 +132,22 @@ function keyPressed(){
 }
 
 
-function endGame(){
+function endGame() {
     ship = null;
     asteroids.length = 0;
     lasers.length = 0;
     gameState = false;
     noCanvas();
-    giveScore();
 }
 
-function giveScore(){
-    let scoreBar = createElement('div');
-    scoreBar.class('score-bar');
+function startGame() {
+    dom.hideLandingPage();
+    body.style.marginTop = '-15px';
+    setup();
 }
+
+function clearGame() {
+    asteroids.length = 0;
+}
+
+
