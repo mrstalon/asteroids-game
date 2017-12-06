@@ -1,3 +1,10 @@
+import './classes/asteroids';
+import './classes/laser';
+import './classes/ship';
+import './classes/dom';
+import './styles/main.css';
+
+
 let shipImg;
 let ship;
 let asteroidMaterial;
