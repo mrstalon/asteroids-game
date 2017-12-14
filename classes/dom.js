@@ -158,7 +158,7 @@ Dom.prototype.setupSpacebarControls = function() {
 
     this.spacebarImage = createElement('img');
     this.spacebarImage.class('spacebar-img');
-    this.spacebarImage.attribute('src', '../images/controls-spacebar.jpg');
+    this.spacebarImage.attribute('src', './images/controls-spacebar.jpg');
     this.spacebarImage.parent(this.controlsSpacebar);
 
     this.spacebarInfo = createElement('p');

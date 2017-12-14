@@ -57,10 +57,10 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "./dist/";
+/******/ 	__webpack_require__.p = "D:\\Coding\\JSprojects\\game\\dist";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -71473,7 +71473,7 @@ module.exports = p5;
 
 },{"../core/core":55,"./p5.Geometry":102}]},{},[46])(46)
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 /* 1 */
@@ -71482,20 +71482,14 @@ module.exports = p5;
 "use strict";
 /* unused harmony export pi5 */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return shipImg; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__classes_asteroids__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__classes_laser__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes_ship__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_dom__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__classes_asteroids__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__classes_laser__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__classes_ship__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_dom__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_p5__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_p5___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_p5__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_p5_lib_addons_p5_dom_js__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_p5_lib_addons_p5_dom_js__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_p5_lib_addons_p5_dom_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_p5_lib_addons_p5_dom_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__fonts_467_ttf__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__fonts_467_ttf___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__fonts_467_ttf__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__images_space_background_png__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__images_space_background_png___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__images_space_background_png__);
-
-
 
 
 
@@ -71714,18 +71708,6 @@ window.rageGameModeSetup = function() {
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "fonts/467.ttf";
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "images/space-background.png";
-
-/***/ }),
-/* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71733,7 +71715,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_p5__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_p5___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_p5__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sketch__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_main_css__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_main_css__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__styles_main_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__styles_main_css__);
 
 
@@ -71742,7 +71724,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 let game = new __WEBPACK_IMPORTED_MODULE_0_p5___default.a(__WEBPACK_IMPORTED_MODULE_1__sketch__["b" /* sketch */]);
 
 /***/ }),
-/* 5 */
+/* 3 */
 /***/ (function(module, exports) {
 
 var g;
@@ -71769,7 +71751,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 6 */
+/* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71895,7 +71877,7 @@ Asteroid.prototype.blowUp = function(laser) {
 }
 
 /***/ }),
-/* 7 */
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71943,7 +71925,7 @@ Laser.prototype.hits = function(asteroid) {
 
 
 /***/ }),
-/* 8 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -72032,7 +72014,7 @@ Ship.prototype.hits = function(asteroid) {
 
 
 /***/ }),
-/* 9 */
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -72184,7 +72166,7 @@ Dom.prototype.setupArrowsControls = function() {
 
     this.arrowsImage = createElement('img');
     this.arrowsImage.class('arrows-img');
-    this.arrowsImage.attribute('src', '../images/controls-arrows.png');
+    this.arrowsImage.attribute('src', './images/controls-arrows.png');
     this.arrowsImage.parent(this.controlsArrows);
     
     this.arrowsInfo = createElement('p');
@@ -72200,7 +72182,7 @@ Dom.prototype.setupSpacebarControls = function() {
 
     this.spacebarImage = createElement('img');
     this.spacebarImage.class('spacebar-img');
-    this.spacebarImage.attribute('src', '../images/controls-spacebar.jpg');
+    this.spacebarImage.attribute('src', './images/controls-spacebar.jpg');
     this.spacebarImage.parent(this.controlsSpacebar);
 
     this.spacebarInfo = createElement('p');
@@ -72316,7 +72298,7 @@ Dom.prototype.deleteCanvas = function(canvasId) {
 
 
 /***/ }),
-/* 10 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! p5.dom.js v0.3.4 Aug 11, 2017 */
@@ -74859,13 +74841,13 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! p5.dom.js v0
 
 
 /***/ }),
-/* 11 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(12);
+var content = __webpack_require__(10);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -74890,21 +74872,21 @@ if(false) {
 }
 
 /***/ }),
-/* 12 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(13)(undefined);
+exports = module.exports = __webpack_require__(11)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "@font-face {\r\n    src: url(" + __webpack_require__(2) + ");\r\n    font-family: cosmo;\r\n}\r\n\r\n\r\nbody {\r\n    padding: 0;\r\n    margin: 0;\r\n    background-image: url(" + __webpack_require__(3) + ");  \r\n    width: 100%;\r\n    height: fit-content;\r\n}\r\n\r\nmain {\r\n    height: 2775px;\r\n    width: 1200px;\r\n    margin: auto;\r\n    font-family: cosmo;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    background-color: black;\r\n    border-radius: 86px;\r\n}\r\n\r\n.score-bar {\r\n    background-color: rebeccapurple;\r\n    width: 600px;\r\n    height: 400px;\r\n    margin: auto;\r\n    color: white;\r\n    display: flex;\r\n    font-family: Arial;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: space-around;\r\n    border-radius: 150px;\r\n    position: relative;\r\n    bottom: 753px; \r\n}\r\n\r\n.dead-indicator {\r\n    font-size: 45px;\r\n    margin-top: -6px;\r\n}\r\n\r\n.score-indicator {\r\n    font-size: 31px;\r\n    margin-top: -29px;\r\n}\r\n\r\n.menu-button {\r\n    margin-top: -30px;\r\n    width: 183px;\r\n    height: 48px;\r\n    border-radius: 23px;\r\n    background-color: steelblue;\r\n    color: white;\r\n    border: 0px;\r\n    font-size: 18px;\r\n}\r\n\r\n.menu-button:hover {\r\n    background-color: rgb(78, 78, 214);\r\n    cursor: pointer;\r\n}\r\n\r\n.play-menu {\r\n    width: 600px;\r\n    height: fit-content;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    flex-direction: column;\r\n}\r\n\r\n.game-name {\r\n    color: white;\r\n    font-size: 52px;\r\n}\r\n\r\n.play-button {\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 3px;\r\n    box-shadow:\r\n     0 1px rgba(255,255,255,.2) inset,\r\n     0 3px 5px rgba(0,1,6,.5),\r\n     0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 240px;\r\n    height: 72px;\r\n    font-size: 30px;\r\n    font-family: cosmo;\r\n    margin-top: 12px;\r\n}\r\n\r\n.play-button:hover {\r\n    background-color: rgb(65, 63, 63);\r\n    cursor: pointer;\r\n}\r\n\r\n.controls-container {\r\n    width: 900px;\r\n    display: flex;\r\n    height: 335px;\r\n    margin-top: 58px;\r\n    flex-direction: column;\r\n}\r\n\r\n.controls-arrows {\r\n    width: 50%;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n}\r\n\r\n.arrows-img {\r\n    width: 283px;\r\n    height: 191px;\r\n}\r\n\r\n.container {\r\n    display: flex;\r\n}\r\n\r\n.contorls-name {\r\n    color: white;\r\n    margin: auto;\r\n    font-size: 50px;\r\n    margin-bottom: 36px;\r\n}\r\n\r\n.arrows-info {\r\n    color: white;\r\n    font-family: arial;\r\n    font-size: 19px;\r\n}\r\n\r\n.controls-spacebar {\r\n    width: 50%;\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-left: 177px;\r\n}\r\n\r\n.spacebar-img {\r\n    width: 283px;\r\n    height: 191px;\r\n}\r\n\r\n.spacebar-info {\r\n    color: white;\r\n    font-family: arial;\r\n    font-size: 19px;\r\n}\r\n\r\n.about-container {\r\n    width: 1000px;\r\n    height: fit-content;\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-top: 30px;\r\n}\r\n\r\n.about-name {\r\n    font-size: 53px;\r\n    color: white;\r\n    width: fit-content;\r\n    margin: auto;\r\n    margin-bottom: 35px;\r\n    margin-top: 15px;\r\n}\r\n\r\n.screenshots-container {\r\n    height: fit-content;\r\n}\r\n\r\n.first-screenshot {\r\n    width: 1000px;\r\n}\r\n\r\n.second-screenshot {\r\n    width: 1000px;\r\n    margin-top: 20px;\r\n}\r\n\r\n.about-info {\r\n    color: white;\r\n    font-family: arial;\r\n    font-size: 24px;\r\n    width: 762px;\r\n    margin: auto;\r\n    margin-top: 16px;\r\n}\r\n\r\n.warning-info {\r\n    color: red;\r\n    margin: auto;\r\n    font-size: 33px;\r\n    font-family: -webkit-pictograph;\r\n    margin-top: 7px;\r\n}\r\n\r\n.dev-info-container {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-top: 60px;\r\n}\r\n\r\n.dev-heading {\r\n    color: white;\r\n    font-size: 51px;\r\n    width: fit-content;\r\n    margin: auto;\r\n}\r\n\r\n.dev-img {\r\n    width: 500px;\r\n    height: 400px;\r\n    border-radius: 250px;\r\n    margin-top: 40px;\r\n    margin: auto;\r\n}\r\n\r\n.dev-name {\r\n    width: fit-content;\r\n    margin: auto;\r\n    font-size: 35px;\r\n    font-family: fantasy;\r\n    color: wheat;\r\n}\r\n\r\n.dev-info {\r\n    color: white;\r\n    font-family: Arial;\r\n    font-size: 23px;\r\n    width: 501px;\r\n}\r\n\r\n.choosed-game-mode {\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 21px;\r\n    box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 156px;\r\n    height: 70px;\r\n    font-size: 22px;\r\n    font-family: cosmo;\r\n}\r\n\r\n.choosed-game-mode-container {\r\n    margin-top: 32px;\r\n    width: 915px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: space-evenly;\r\n    height: 90px;\r\n}\r\n\r\n.easy-game-mode {\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 21px;\r\n    background-color: rgb(166, 255, 0);\r\n    box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 125px;\r\n    height: 70px;\r\n    font-size: 22px;\r\n    font-family: cosmo;\r\n}\r\n\r\n.easy-game-mode:hover {\r\n    cursor: pointer;\r\n    background-color: rgb(151, 190, 72);\r\n}\r\n\r\n.medium-game-mode {\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 21px;\r\n    background-color: #eeff00;\r\n    box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 155px;\r\n    height: 70px;\r\n    font-size: 22px;\r\n    font-family: cosmo;\r\n}\r\n\r\n.medium-game-mode:hover {\r\n    cursor: pointer;\r\n    background-color: rgb(177, 185, 52);\r\n}\r\n\r\n.hard-game-mode {\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 21px;\r\n    background-color: #ffa500;\r\n    box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 125px;\r\n    height: 70px;\r\n    font-size: 22px;\r\n    font-family: cosmo;\r\n}\r\n\r\n.hard-game-mode:hover {\r\n    cursor: pointer;\r\n    background-color: rgb(150, 115, 55);\r\n}\r\n\r\n.rage-game-mode{\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 21px;\r\n    background-color: #ff0000;\r\n    box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 134px;\r\n    height: 70px;\r\n    font-size: 22px;\r\n    font-family: cosmo;\r\n}\r\n\r\n.rage-game-mode:hover {\r\n    cursor: pointer;\r\n    background-color: rgb(143, 46, 46);\r\n}\r\n\r\n.game-mode-text {\r\n    color: white;\r\n}\r\n\r\n.score-shower {\r\n    color: white;\r\n    position: absolute;\r\n    left: 120px;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, "@font-face {\r\n    src: url(" + __webpack_require__(12) + ");\r\n    font-family: cosmo;\r\n}\r\n\r\n\r\nbody {\r\n    padding: 0;\r\n    margin: 0;\r\n    background-image: url(" + __webpack_require__(13) + ");  \r\n    width: 100%;\r\n    height: fit-content;\r\n}\r\n\r\nmain {\r\n    height: 2775px;\r\n    width: 1200px;\r\n    margin: auto;\r\n    font-family: cosmo;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    background-color: black;\r\n    border-radius: 86px;\r\n}\r\n\r\n.score-bar {\r\n    background-color: rebeccapurple;\r\n    width: 600px;\r\n    height: 400px;\r\n    margin: auto;\r\n    color: white;\r\n    display: flex;\r\n    font-family: Arial;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: space-around;\r\n    border-radius: 150px;\r\n    position: relative;\r\n    bottom: 753px; \r\n}\r\n\r\n.dead-indicator {\r\n    font-size: 45px;\r\n    margin-top: -6px;\r\n}\r\n\r\n.score-indicator {\r\n    font-size: 31px;\r\n    margin-top: -29px;\r\n}\r\n\r\n.menu-button {\r\n    margin-top: -30px;\r\n    width: 183px;\r\n    height: 48px;\r\n    border-radius: 23px;\r\n    background-color: steelblue;\r\n    color: white;\r\n    border: 0px;\r\n    font-size: 18px;\r\n}\r\n\r\n.menu-button:hover {\r\n    background-color: rgb(78, 78, 214);\r\n    cursor: pointer;\r\n}\r\n\r\n.play-menu {\r\n    width: 600px;\r\n    height: fit-content;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    flex-direction: column;\r\n}\r\n\r\n.game-name {\r\n    color: white;\r\n    font-size: 52px;\r\n}\r\n\r\n.play-button {\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 3px;\r\n    box-shadow:\r\n     0 1px rgba(255,255,255,.2) inset,\r\n     0 3px 5px rgba(0,1,6,.5),\r\n     0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 240px;\r\n    height: 72px;\r\n    font-size: 30px;\r\n    font-family: cosmo;\r\n    margin-top: 12px;\r\n}\r\n\r\n.play-button:hover {\r\n    background-color: rgb(65, 63, 63);\r\n    cursor: pointer;\r\n}\r\n\r\n.controls-container {\r\n    width: 900px;\r\n    display: flex;\r\n    height: 335px;\r\n    margin-top: 58px;\r\n    flex-direction: column;\r\n}\r\n\r\n.controls-arrows {\r\n    width: 50%;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n}\r\n\r\n.arrows-img {\r\n    width: 283px;\r\n    height: 191px;\r\n}\r\n\r\n.container {\r\n    display: flex;\r\n}\r\n\r\n.contorls-name {\r\n    color: white;\r\n    margin: auto;\r\n    font-size: 50px;\r\n    margin-bottom: 36px;\r\n}\r\n\r\n.arrows-info {\r\n    color: white;\r\n    font-family: arial;\r\n    font-size: 19px;\r\n}\r\n\r\n.controls-spacebar {\r\n    width: 50%;\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-left: 177px;\r\n}\r\n\r\n.spacebar-img {\r\n    width: 283px;\r\n    height: 191px;\r\n}\r\n\r\n.spacebar-info {\r\n    color: white;\r\n    font-family: arial;\r\n    font-size: 19px;\r\n}\r\n\r\n.about-container {\r\n    width: 1000px;\r\n    height: fit-content;\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-top: 30px;\r\n}\r\n\r\n.about-name {\r\n    font-size: 53px;\r\n    color: white;\r\n    width: fit-content;\r\n    margin: auto;\r\n    margin-bottom: 35px;\r\n    margin-top: 15px;\r\n}\r\n\r\n.screenshots-container {\r\n    height: fit-content;\r\n}\r\n\r\n.first-screenshot {\r\n    width: 1000px;\r\n}\r\n\r\n.second-screenshot {\r\n    width: 1000px;\r\n    margin-top: 20px;\r\n}\r\n\r\n.about-info {\r\n    color: white;\r\n    font-family: arial;\r\n    font-size: 24px;\r\n    width: 762px;\r\n    margin: auto;\r\n    margin-top: 16px;\r\n}\r\n\r\n.warning-info {\r\n    color: red;\r\n    margin: auto;\r\n    font-size: 33px;\r\n    font-family: -webkit-pictograph;\r\n    margin-top: 7px;\r\n}\r\n\r\n.dev-info-container {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-top: 60px;\r\n}\r\n\r\n.dev-heading {\r\n    color: white;\r\n    font-size: 51px;\r\n    width: fit-content;\r\n    margin: auto;\r\n}\r\n\r\n.dev-img {\r\n    width: 500px;\r\n    height: 400px;\r\n    border-radius: 250px;\r\n    margin-top: 40px;\r\n    margin: auto;\r\n}\r\n\r\n.dev-name {\r\n    width: fit-content;\r\n    margin: auto;\r\n    font-size: 35px;\r\n    font-family: fantasy;\r\n    color: wheat;\r\n}\r\n\r\n.dev-info {\r\n    color: white;\r\n    font-family: Arial;\r\n    font-size: 23px;\r\n    width: 501px;\r\n}\r\n\r\n.choosed-game-mode {\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 21px;\r\n    box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 156px;\r\n    height: 70px;\r\n    font-size: 22px;\r\n    font-family: cosmo;\r\n}\r\n\r\n.choosed-game-mode-container {\r\n    margin-top: 32px;\r\n    width: 915px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: space-evenly;\r\n    height: 90px;\r\n}\r\n\r\n.easy-game-mode {\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 21px;\r\n    background-color: rgb(166, 255, 0);\r\n    box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 125px;\r\n    height: 70px;\r\n    font-size: 22px;\r\n    font-family: cosmo;\r\n}\r\n\r\n.easy-game-mode:hover {\r\n    cursor: pointer;\r\n    background-color: rgb(151, 190, 72);\r\n}\r\n\r\n.medium-game-mode {\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 21px;\r\n    background-color: #eeff00;\r\n    box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 155px;\r\n    height: 70px;\r\n    font-size: 22px;\r\n    font-family: cosmo;\r\n}\r\n\r\n.medium-game-mode:hover {\r\n    cursor: pointer;\r\n    background-color: rgb(177, 185, 52);\r\n}\r\n\r\n.hard-game-mode {\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 21px;\r\n    background-color: #ffa500;\r\n    box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 125px;\r\n    height: 70px;\r\n    font-size: 22px;\r\n    font-family: cosmo;\r\n}\r\n\r\n.hard-game-mode:hover {\r\n    cursor: pointer;\r\n    background-color: rgb(150, 115, 55);\r\n}\r\n\r\n.rage-game-mode{\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 21px;\r\n    background-color: #ff0000;\r\n    box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 134px;\r\n    height: 70px;\r\n    font-size: 22px;\r\n    font-family: cosmo;\r\n}\r\n\r\n.rage-game-mode:hover {\r\n    cursor: pointer;\r\n    background-color: rgb(143, 46, 46);\r\n}\r\n\r\n.game-mode-text {\r\n    color: white;\r\n}\r\n\r\n.score-shower {\r\n    color: white;\r\n    position: absolute;\r\n    left: 120px;\r\n}\r\n\r\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 13 */
+/* 11 */
 /***/ (function(module, exports) {
 
 /*
@@ -74984,6 +74966,18 @@ function toComment(sourceMap) {
 	return '/*# ' + data + ' */';
 }
 
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "fonts/467.ttf";
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/space-background.png";
 
 /***/ }),
 /* 14 */
