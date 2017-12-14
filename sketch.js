@@ -24,6 +24,7 @@ window.gameMode = 'easy';
 
 export const sketch = function(pi5) {
 
+    console.log('hi');
     shipImg = loadImage('./images/ship.png');
     let scoreShower = createScoreShower();
 
