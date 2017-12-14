@@ -1,7 +1,7 @@
 let path = require('path');
 
 module.exports = {
-    entry: './sketch.js',
+    entry: './app.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
@@ -16,7 +16,14 @@ module.exports = {
                     'style-loader',
                     'css-loader'
                 ]
-            }
+            }, 
+            {
+                test: /\.(ttf|eot|woff|woff2|jpg|png)$/,
+                loader: "file-loader",
+                options: {
+                  name: "fonts/[name].[ext]",
+                },
+              },
         ]
     }
 };

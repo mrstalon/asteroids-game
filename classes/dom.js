@@ -1,8 +1,11 @@
-function Dom(){
+import p5 from 'p5';
+import {html} from '../sketch';
+
+export default function Dom() {
 
 }
 
-Dom.prototype.createScoreBar = function (){
+Dom.prototype.createScoreBar = function () {
     this.scoreBar = createElement('div');
     this.scoreBar.class('score-bar');
 
@@ -20,11 +23,11 @@ Dom.prototype.createScoreBar = function (){
     this.menuButton.class('menu-button');
     this.menuButton.parent(this.scoreBar);
     this.menuButton.html('Back to menu');
-    this.menuButton.attribute('onclick', 'dom.loadLandingPage()');
+    this.menuButton.attribute('onclick', 'loadMenu()');
 }
 
-Dom.prototype.loadLandingPage = function(){
-    clearGame();
+Dom.prototype.loadLandingPage = function() {
+    window.deleteAsteroids();
 
     this.removeScoreBar();
 
@@ -41,11 +44,12 @@ Dom.prototype.loadLandingPage = function(){
 Dom.prototype.removeScoreBar = function() {
     html = document.getElementsByTagName("HTML")[0];
     html.style.overflow = 'scroll';
-    this.scoreBar.remove();
-    this.deadIndicator.remove();
-    this.scoreIndicator.remove();
-    this.menuButton.remove();
-    noCanvas();
+    if(this.scoreBar !== undefined){
+       this.scoreBar.remove();
+       this.deadIndicator.remove();
+       this.scoreIndicator.remove();
+       this.menuButton.remove();
+    }
 }
 
 Dom.prototype.setupPlayMenu = function() {
@@ -59,6 +63,50 @@ Dom.prototype.setupPlayMenu = function() {
     this.gameName.class('game-name');
     this.gameName.html('ASTEROIDS');
     this.gameName.parent(this.playMenu);
+
+    this.gameModeText = createElement('h2');
+    this.gameModeText.class('game-mode-text');
+    this.gameModeText.html('Choose game mode');
+    this.gameModeText.parent(this.playMenu);
+
+    this.createGamoModeChooser();
+}
+
+Dom.prototype.createGamoModeChooser = function() {
+    this.choosedGameMode = createElement('button');
+    this.choosedGameMode.style.disabled = 'true';
+    this.choosedGameMode.class('choosed-game-mode');
+    this.choosedGameMode.style('background-color', '#a6ff00');
+    this.choosedGameMode.html('easy');
+    this.choosedGameMode.parent(this.playMenu);
+
+    this.choosedGameModeContainer = createElement('div');
+    this.choosedGameModeContainer.class('choosed-game-mode-container');
+    this.choosedGameModeContainer.parent(this.playMenu);
+
+    this.easyGameMode = createElement('button');
+    this.easyGameMode.class('easy-game-mode');
+    this.easyGameMode.html('easy');
+    this.easyGameMode.attribute('onclick', 'easyGameModeSetup()');
+    this.easyGameMode.parent(this.choosedGameModeContainer);
+
+    this.mediumGameMode = createElement('button');
+    this.mediumGameMode.class('medium-game-mode');
+    this.mediumGameMode.html('medium');
+    this.mediumGameMode.attribute('onclick', 'mediumGameModeSetup()');
+    this.mediumGameMode.parent(this.choosedGameModeContainer);
+
+    this.hardGameMode = createElement('button');
+    this.hardGameMode.class('hard-game-mode');
+    this.hardGameMode.html('hard');
+    this.hardGameMode.attribute('onclick', 'hardGameModeSetup()');
+    this.hardGameMode.parent(this.choosedGameModeContainer);
+
+    this.rageGameMode = createElement('button');
+    this.rageGameMode.class('rage-game-mode');
+    this.rageGameMode.html('rage');
+    this.rageGameMode.attribute('onclick', 'rageGameModeSetup()');
+    this.rageGameMode.parent(this.choosedGameModeContainer);
         
     this.playButton = createElement('button');
     this.playButton.class('play-button');
@@ -87,7 +135,7 @@ Dom.prototype.setupControlsInformation = function() {
   
 }
 
-Dom.prototype.setupArrowsControls = function(){
+Dom.prototype.setupArrowsControls = function() {
     this.controlsArrows = createElement('div');
     this.controlsArrows.class('controls-arrows');
     this.controlsArrows.parent(this.container);
@@ -155,9 +203,14 @@ Dom.prototype.setupScreenshots = function() {
 
 Dom.prototype.setupAboutText = function() {
     this.aboutInfo = createElement('p');
-    this.aboutInfo.html('Asteroids is an arcade space shooter released in November 1979. The object of the game is to shoot and destroy as much asteroids as you can. The game has only one level with constantly increasing difficulty.');
+    this.aboutInfo.html('Asteroids is an arcade space shooter released in November 1979. The object of the game is to shoot and destroy as much asteroids as you can. The game has 4 modes with different difficulty.');
     this.aboutInfo.class('about-info');
     this.aboutInfo.parent(this.aboutContainer);
+
+    this.warningInfo = createElement('p');
+    this.warningInfo.html('!!WARNING!!DO NOT TRY RAGE MODE!!WARNING!!');
+    this.warningInfo.class('warning-info');
+    this.warningInfo.parent(this.aboutContainer);
 }
 
 Dom.prototype.setupAboutDeveloperInformation = function() {
@@ -188,6 +241,33 @@ Dom.prototype.setupAboutDeveloperInformation = function() {
 
 }
 
-Dom.prototype.hideLandingPage = function(){
+Dom.prototype.createScoreShower = function() {
+    this.scoreShower = createElement('h1');
+    this.scoreShower.class('score-shower');
+    this.scoreShower.html(0);
+}
+
+Dom.prototype.hideLandingPage = function() {
     this.main.remove();
 }
+
+Dom.prototype.updateChoosedGameMode = function() {
+    this.choosedGameMode.html(window.gameMode);
+    if(window.gameMode === 'easy') {
+        this.choosedGameMode.style('background-color', '#a6ff00');
+    }else if(window.gameMode === 'medium') {
+        this.choosedGameMode.style('background-color', '#eeff00');
+    }else if(window.gameMode === 'hard') {
+        this.choosedGameMode.style('background-color', '#ffa500');
+    }else if(window.gameMode === 'rage') {
+        this.choosedGameMode.style('background-color', '#ff0000');
+    }
+}
+
+Dom.prototype.deleteCanvas = function(canvasId) {
+    let canvasToDelete = document.getElementById(canvasId);
+    if(canvasToDelete !== null){
+        canvasToDelete.remove();
+    }
+}
+
