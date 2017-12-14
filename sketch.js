@@ -4,8 +4,6 @@ import Ship from'./classes/ship';
 import Dom from './classes/dom';
 import p5 from 'p5';
 import 'p5/lib/addons/p5.dom.js';
-import './fonts/467.ttf';
-import './images/space-background.png';
 
 
 export let pi5 = new p5();

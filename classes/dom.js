@@ -142,7 +142,7 @@ Dom.prototype.setupArrowsControls = function() {
 
     this.arrowsImage = createElement('img');
     this.arrowsImage.class('arrows-img');
-    this.arrowsImage.attribute('src', '../images/controls-arrows.png');
+    this.arrowsImage.attribute('src', './images/controls-arrows.png');
     this.arrowsImage.parent(this.controlsArrows);
     
     this.arrowsInfo = createElement('p');
