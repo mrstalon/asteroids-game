@@ -191,12 +191,12 @@ Dom.prototype.setupScreenshots = function() {
     this.screenshotsContainer.parent(this.aboutContainer);
 
     this.firstScreenshot = createElement('img');
-    this.firstScreenshot.attribute('src','../images/screenshot_01.png');
+    this.firstScreenshot.attribute('src','./images/screenshot_01.png');
     this.firstScreenshot.class('first-screenshot');
     this.firstScreenshot.parent(this.screenshotsContainer);
 
     this.secondScreenshot = createElement('img');
-    this.secondScreenshot.attribute('src', '../images/screenshot_02.png');
+    this.secondScreenshot.attribute('src', './images/screenshot_02.png');
     this.secondScreenshot.class('second-screenshot');
     this.secondScreenshot.parent(this.screenshotsContainer);
 }
@@ -224,7 +224,7 @@ Dom.prototype.setupAboutDeveloperInformation = function() {
     this.devHeading.parent(this.devInfoContainer);
 
     this.devImage = createElement('img');
-    this.devImage.attribute('src', '../images/Developer.jpg');
+    this.devImage.attribute('src', './images/Developer.jpg');
     this.devImage.class('dev-img');
     this.devImage.parent(this.devInfoContainer);
 
