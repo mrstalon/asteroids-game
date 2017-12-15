@@ -71516,6 +71516,7 @@ window.gameMode = 'easy';
 
 const sketch = function(pi5) {
 
+    console.log('hi');
     shipImg = loadImage('./images/ship.png');
     let scoreShower = createScoreShower();
 
@@ -72215,12 +72216,12 @@ Dom.prototype.setupScreenshots = function() {
     this.screenshotsContainer.parent(this.aboutContainer);
 
     this.firstScreenshot = createElement('img');
-    this.firstScreenshot.attribute('src','../images/screenshot_01.png');
+    this.firstScreenshot.attribute('src','./images/screenshot_01.png');
     this.firstScreenshot.class('first-screenshot');
     this.firstScreenshot.parent(this.screenshotsContainer);
 
     this.secondScreenshot = createElement('img');
-    this.secondScreenshot.attribute('src', '../images/screenshot_02.png');
+    this.secondScreenshot.attribute('src', './images/screenshot_02.png');
     this.secondScreenshot.class('second-screenshot');
     this.secondScreenshot.parent(this.screenshotsContainer);
 }
@@ -72248,7 +72249,7 @@ Dom.prototype.setupAboutDeveloperInformation = function() {
     this.devHeading.parent(this.devInfoContainer);
 
     this.devImage = createElement('img');
-    this.devImage.attribute('src', '../images/Developer.jpg');
+    this.devImage.attribute('src', './images/Developer.jpg');
     this.devImage.class('dev-img');
     this.devImage.parent(this.devInfoContainer);
 
@@ -75049,7 +75050,7 @@ module.exports = function(list, options) {
 
 	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
 	// tags it will allow on a page
-	if (!options.singleton) options.singleton = isOldIE();
+	if (!options.singleton && typeof options.singleton !== "boolean") options.singleton = isOldIE();
 
 	// By default, add <style> tags to the <head> element
 	if (!options.insertInto) options.insertInto = "head";
