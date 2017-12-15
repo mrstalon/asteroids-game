@@ -2,7 +2,6 @@
   "name": "game",
   "version": "1.0.0",
   "description": "",
-  "main": "sketch.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack-dev-server"
@@ -25,6 +24,7 @@
   },
   "dependencies": {
     "file-loader": "^1.1.5",
+    "fontface-loader": "0.0.8",
     "p5": "^0.5.16",
     "url-loader": "^0.6.2"
   }

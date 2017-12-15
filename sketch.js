@@ -2,7 +2,6 @@ import Asteroid from './classes/asteroids';
 import Laser from './classes/laser';
 import Ship from'./classes/ship';
 import Dom from './classes/dom';
-import './styles/main.css';
 import p5 from 'p5';
 import 'p5/lib/addons/p5.dom.js';
 
@@ -25,6 +24,7 @@ window.gameMode = 'easy';
 
 export const sketch = function(pi5) {
 
+    console.log('hi');
     shipImg = loadImage('./images/ship.png');
     let scoreShower = createScoreShower();
 
@@ -62,7 +62,7 @@ pi5.setup = function() {
 
 
 pi5.draw = function() {
-    frameRate(120);
+    frameRate(60);
     resizeCanvas(width, height);
     background('#030c1b');
 
@@ -171,7 +171,7 @@ function setUpSpawnTime() {
     }else if(window.gameMode === 'hard') {
         return 2000;
     }else if(window.gameMode === 'rage') {
-        return 1000;
+        return 2000;
     }
 }
 

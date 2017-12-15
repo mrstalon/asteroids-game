@@ -16,7 +16,7 @@ export default function Asteroid(position, radious) {
         this.velocity = p5.Vector.random2D();
 
         if(window.gameMode === 'rage') {
-            this.velocity.mult(5);
+            this.velocity.mult(7);
         }else {
             this.velocity.mult(3);
         }
@@ -57,7 +57,7 @@ export default function Asteroid(position, radious) {
        this.velocity = p5.Vector.random2D();
 
        if(window.gameMode === 'rage') {
-           this.velocity.mult(3);
+           this.velocity.mult(5);
        }else {
            this.velocity.mult(2);
        }
