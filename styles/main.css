@@ -1,5 +1,5 @@
 @font-face {
-    src: url('./fonts/467.ttf');
+    src: url('../fonts/467.ttf');
     font-family: cosmo;
 }
 
@@ -7,7 +7,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-image: url('./images/space-background.png');  
+    background-image: url('../images/space-background.png');  
     width: 100%;
     height: fit-content;
 }
