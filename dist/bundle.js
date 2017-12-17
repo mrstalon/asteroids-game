@@ -71685,6 +71685,7 @@ window.loadMenu = function() {
 
 window.deleteAsteroids = function() {
     asteroids.length = 0;
+    window.score = 0;
 }
 
 window.easyGameModeSetup = function() {
