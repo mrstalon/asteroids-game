@@ -74845,49 +74845,55 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! p5.dom.js v0
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(10);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {"hmr":true}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(14)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../node_modules/css-loader/index.js??ref--0-1!./main.css", function() {
-			var newContent = require("!!../node_modules/css-loader/index.js??ref--0-1!./main.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(11)(undefined);
+exports = module.exports = __webpack_require__(10)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "@font-face {\r\n    src: url(" + __webpack_require__(12) + ");\r\n    font-family: cosmo;\r\n}\r\n\r\n\r\nbody {\r\n    padding: 0;\r\n    margin: 0;\r\n    background-image: url(" + __webpack_require__(13) + ");  \r\n    width: 100%;\r\n    height: fit-content;\r\n}\r\n\r\nmain {\r\n    height: 2775px;\r\n    width: 1200px;\r\n    margin: auto;\r\n    font-family: cosmo;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    background-color: black;\r\n    border-radius: 86px;\r\n}\r\n\r\n.score-bar {\r\n    background-color: rebeccapurple;\r\n    width: 600px;\r\n    height: 400px;\r\n    margin: auto;\r\n    color: white;\r\n    display: flex;\r\n    font-family: Arial;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: space-around;\r\n    border-radius: 150px;\r\n    position: relative;\r\n    bottom: 753px; \r\n}\r\n\r\n.dead-indicator {\r\n    font-size: 45px;\r\n    margin-top: -6px;\r\n}\r\n\r\n.score-indicator {\r\n    font-size: 31px;\r\n    margin-top: -29px;\r\n}\r\n\r\n.menu-button {\r\n    margin-top: -30px;\r\n    width: 183px;\r\n    height: 48px;\r\n    border-radius: 23px;\r\n    background-color: steelblue;\r\n    color: white;\r\n    border: 0px;\r\n    font-size: 18px;\r\n}\r\n\r\n.menu-button:hover {\r\n    background-color: rgb(78, 78, 214);\r\n    cursor: pointer;\r\n}\r\n\r\n.play-menu {\r\n    width: 600px;\r\n    height: fit-content;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    flex-direction: column;\r\n}\r\n\r\n.game-name {\r\n    color: white;\r\n    font-size: 52px;\r\n}\r\n\r\n.play-button {\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 3px;\r\n    box-shadow:\r\n     0 1px rgba(255,255,255,.2) inset,\r\n     0 3px 5px rgba(0,1,6,.5),\r\n     0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 240px;\r\n    height: 72px;\r\n    font-size: 30px;\r\n    font-family: cosmo;\r\n    margin-top: 12px;\r\n}\r\n\r\n.play-button:hover {\r\n    background-color: rgb(65, 63, 63);\r\n    cursor: pointer;\r\n}\r\n\r\n.controls-container {\r\n    width: 900px;\r\n    display: flex;\r\n    height: 335px;\r\n    margin-top: 58px;\r\n    flex-direction: column;\r\n}\r\n\r\n.controls-arrows {\r\n    width: 50%;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n}\r\n\r\n.arrows-img {\r\n    width: 283px;\r\n    height: 191px;\r\n}\r\n\r\n.container {\r\n    display: flex;\r\n}\r\n\r\n.contorls-name {\r\n    color: white;\r\n    margin: auto;\r\n    font-size: 50px;\r\n    margin-bottom: 36px;\r\n}\r\n\r\n.arrows-info {\r\n    color: white;\r\n    font-family: arial;\r\n    font-size: 19px;\r\n}\r\n\r\n.controls-spacebar {\r\n    width: 50%;\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-left: 177px;\r\n}\r\n\r\n.spacebar-img {\r\n    width: 283px;\r\n    height: 191px;\r\n}\r\n\r\n.spacebar-info {\r\n    color: white;\r\n    font-family: arial;\r\n    font-size: 19px;\r\n}\r\n\r\n.about-container {\r\n    width: 1000px;\r\n    height: fit-content;\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-top: 30px;\r\n}\r\n\r\n.about-name {\r\n    font-size: 53px;\r\n    color: white;\r\n    width: fit-content;\r\n    margin: auto;\r\n    margin-bottom: 35px;\r\n    margin-top: 15px;\r\n}\r\n\r\n.screenshots-container {\r\n    height: fit-content;\r\n}\r\n\r\n.first-screenshot {\r\n    width: 1000px;\r\n}\r\n\r\n.second-screenshot {\r\n    width: 1000px;\r\n    margin-top: 20px;\r\n}\r\n\r\n.about-info {\r\n    color: white;\r\n    font-family: arial;\r\n    font-size: 24px;\r\n    width: 762px;\r\n    margin: auto;\r\n    margin-top: 16px;\r\n}\r\n\r\n.warning-info {\r\n    color: red;\r\n    margin: auto;\r\n    font-size: 33px;\r\n    font-family: -webkit-pictograph;\r\n    margin-top: 7px;\r\n}\r\n\r\n.dev-info-container {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-top: 60px;\r\n}\r\n\r\n.dev-heading {\r\n    color: white;\r\n    font-size: 51px;\r\n    width: fit-content;\r\n    margin: auto;\r\n}\r\n\r\n.dev-img {\r\n    width: 500px;\r\n    height: 400px;\r\n    border-radius: 250px;\r\n    margin-top: 40px;\r\n    margin: auto;\r\n}\r\n\r\n.dev-name {\r\n    width: fit-content;\r\n    margin: auto;\r\n    font-size: 35px;\r\n    font-family: fantasy;\r\n    color: wheat;\r\n}\r\n\r\n.dev-info {\r\n    color: white;\r\n    font-family: Arial;\r\n    font-size: 23px;\r\n    width: 501px;\r\n}\r\n\r\n.choosed-game-mode {\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 21px;\r\n    box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 156px;\r\n    height: 70px;\r\n    font-size: 22px;\r\n    font-family: cosmo;\r\n}\r\n\r\n.choosed-game-mode-container {\r\n    margin-top: 32px;\r\n    width: 915px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: space-evenly;\r\n    height: 90px;\r\n}\r\n\r\n.easy-game-mode {\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 21px;\r\n    background-color: rgb(166, 255, 0);\r\n    box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 125px;\r\n    height: 70px;\r\n    font-size: 22px;\r\n    font-family: cosmo;\r\n}\r\n\r\n.easy-game-mode:hover {\r\n    cursor: pointer;\r\n    background-color: rgb(151, 190, 72);\r\n}\r\n\r\n.medium-game-mode {\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 21px;\r\n    background-color: #eeff00;\r\n    box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 155px;\r\n    height: 70px;\r\n    font-size: 22px;\r\n    font-family: cosmo;\r\n}\r\n\r\n.medium-game-mode:hover {\r\n    cursor: pointer;\r\n    background-color: rgb(177, 185, 52);\r\n}\r\n\r\n.hard-game-mode {\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 21px;\r\n    background-color: #ffa500;\r\n    box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 125px;\r\n    height: 70px;\r\n    font-size: 22px;\r\n    font-family: cosmo;\r\n}\r\n\r\n.hard-game-mode:hover {\r\n    cursor: pointer;\r\n    background-color: rgb(150, 115, 55);\r\n}\r\n\r\n.rage-game-mode{\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 21px;\r\n    background-color: #ff0000;\r\n    box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 134px;\r\n    height: 70px;\r\n    font-size: 22px;\r\n    font-family: cosmo;\r\n}\r\n\r\n.rage-game-mode:hover {\r\n    cursor: pointer;\r\n    background-color: rgb(143, 46, 46);\r\n}\r\n\r\n.game-mode-text {\r\n    color: white;\r\n}\r\n\r\n.score-shower {\r\n    color: white;\r\n    position: absolute;\r\n    left: 120px;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, "@font-face {\r\n    src: url(" + __webpack_require__(11) + ");\r\n    font-family: cosmo;\r\n}\r\n\r\n\r\nbody {\r\n    padding: 0;\r\n    margin: 0;\r\n    background-image: url(" + __webpack_require__(12) + ");  \r\n    width: 100%;\r\n    height: fit-content;\r\n}\r\n\r\nmain {\r\n    height: 2775px;\r\n    width: 1200px;\r\n    margin: auto;\r\n    font-family: cosmo;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    background-color: black;\r\n    border-radius: 86px;\r\n}\r\n\r\n.styles-main__score-bar--_iiz- {\r\n    background-color: rebeccapurple;\r\n    width: 600px;\r\n    height: 400px;\r\n    margin: auto;\r\n    color: white;\r\n    display: flex;\r\n    font-family: Arial;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: space-around;\r\n    border-radius: 150px;\r\n    position: relative;\r\n    bottom: 753px; \r\n}\r\n\r\n.styles-main__dead-indicator--ZZr2k {\r\n    font-size: 45px;\r\n    margin-top: -6px;\r\n}\r\n\r\n.styles-main__score-indicator--2wehh {\r\n    font-size: 31px;\r\n    margin-top: -29px;\r\n}\r\n\r\n.styles-main__menu-button--3rxYJ {\r\n    margin-top: -30px;\r\n    width: 183px;\r\n    height: 48px;\r\n    border-radius: 23px;\r\n    background-color: steelblue;\r\n    color: white;\r\n    border: 0px;\r\n    font-size: 18px;\r\n}\r\n\r\n.styles-main__menu-button--3rxYJ:hover {\r\n    background-color: rgb(78, 78, 214);\r\n    cursor: pointer;\r\n}\r\n\r\n.styles-main__play-menu--2KCTF {\r\n    width: 600px;\r\n    height: fit-content;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    flex-direction: column;\r\n}\r\n\r\n.styles-main__game-name--3OjVG {\r\n    color: white;\r\n    font-size: 52px;\r\n}\r\n\r\n.styles-main__play-button--1Ikw9 {\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 3px;\r\n    box-shadow:\r\n     0 1px rgba(255,255,255,.2) inset,\r\n     0 3px 5px rgba(0,1,6,.5),\r\n     0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 240px;\r\n    height: 72px;\r\n    font-size: 30px;\r\n    font-family: cosmo;\r\n    margin-top: 12px;\r\n}\r\n\r\n.styles-main__play-button--1Ikw9:hover {\r\n    background-color: rgb(65, 63, 63);\r\n    cursor: pointer;\r\n}\r\n\r\n.styles-main__controls-container--3eEYt {\r\n    width: 900px;\r\n    display: flex;\r\n    height: 335px;\r\n    margin-top: 58px;\r\n    flex-direction: column;\r\n}\r\n\r\n.styles-main__controls-arrows--kVpFl {\r\n    width: 50%;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n}\r\n\r\n.styles-main__arrows-img--35NoO {\r\n    width: 283px;\r\n    height: 191px;\r\n}\r\n\r\n.styles-main__container--IzipT {\r\n    display: flex;\r\n}\r\n\r\n.styles-main__contorls-name--3iN_Z {\r\n    color: white;\r\n    margin: auto;\r\n    font-size: 50px;\r\n    margin-bottom: 36px;\r\n}\r\n\r\n.styles-main__arrows-info--26Iea {\r\n    color: white;\r\n    font-family: arial;\r\n    font-size: 19px;\r\n}\r\n\r\n.styles-main__controls-spacebar--33BoR {\r\n    width: 50%;\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-left: 177px;\r\n}\r\n\r\n.styles-main__spacebar-img--2DEs_ {\r\n    width: 283px;\r\n    height: 191px;\r\n}\r\n\r\n.styles-main__spacebar-info--2bxdk {\r\n    color: white;\r\n    font-family: arial;\r\n    font-size: 19px;\r\n}\r\n\r\n.styles-main__about-container--2YBTI {\r\n    width: 1000px;\r\n    height: fit-content;\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-top: 30px;\r\n}\r\n\r\n.styles-main__about-name--34xNz {\r\n    font-size: 53px;\r\n    color: white;\r\n    width: fit-content;\r\n    margin: auto;\r\n    margin-bottom: 35px;\r\n    margin-top: 15px;\r\n}\r\n\r\n.styles-main__screenshots-container--1iWs8 {\r\n    height: fit-content;\r\n}\r\n\r\n.styles-main__first-screenshot--Ycw0M {\r\n    width: 1000px;\r\n}\r\n\r\n.styles-main__second-screenshot--2noAI {\r\n    width: 1000px;\r\n    margin-top: 20px;\r\n}\r\n\r\n.styles-main__about-info--2n9yj {\r\n    color: white;\r\n    font-family: arial;\r\n    font-size: 24px;\r\n    width: 762px;\r\n    margin: auto;\r\n    margin-top: 16px;\r\n}\r\n\r\n.styles-main__warning-info--3lBre {\r\n    color: red;\r\n    margin: auto;\r\n    font-size: 33px;\r\n    font-family: -webkit-pictograph;\r\n    margin-top: 7px;\r\n}\r\n\r\n.styles-main__dev-info-container--xoP-Q {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-top: 60px;\r\n}\r\n\r\n.styles-main__dev-heading--1H4L2 {\r\n    color: white;\r\n    font-size: 51px;\r\n    width: fit-content;\r\n    margin: auto;\r\n}\r\n\r\n.styles-main__dev-img--2Aapt {\r\n    width: 500px;\r\n    height: 400px;\r\n    border-radius: 250px;\r\n    margin-top: 40px;\r\n    margin: auto;\r\n}\r\n\r\n.styles-main__dev-name--1hvtj {\r\n    width: fit-content;\r\n    margin: auto;\r\n    font-size: 35px;\r\n    font-family: fantasy;\r\n    color: wheat;\r\n}\r\n\r\n.styles-main__dev-info--2hCqO {\r\n    color: white;\r\n    font-family: Arial;\r\n    font-size: 23px;\r\n    width: 501px;\r\n}\r\n\r\n.styles-main__choosed-game-mode--2fVtc {\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 21px;\r\n    box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 156px;\r\n    height: 70px;\r\n    font-size: 22px;\r\n    font-family: cosmo;\r\n}\r\n\r\n.styles-main__choosed-game-mode-container--3ZsD9 {\r\n    margin-top: 32px;\r\n    width: 915px;\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: space-evenly;\r\n    height: 90px;\r\n}\r\n\r\n.styles-main__easy-game-mode--2ch3v {\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 21px;\r\n    background-color: rgb(166, 255, 0);\r\n    box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 125px;\r\n    height: 70px;\r\n    font-size: 22px;\r\n    font-family: cosmo;\r\n}\r\n\r\n.styles-main__easy-game-mode--2ch3v:hover {\r\n    cursor: pointer;\r\n    background-color: rgb(151, 190, 72);\r\n}\r\n\r\n.styles-main__medium-game-mode--1Scv9 {\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 21px;\r\n    background-color: #eeff00;\r\n    box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 155px;\r\n    height: 70px;\r\n    font-size: 22px;\r\n    font-family: cosmo;\r\n}\r\n\r\n.styles-main__medium-game-mode--1Scv9:hover {\r\n    cursor: pointer;\r\n    background-color: rgb(177, 185, 52);\r\n}\r\n\r\n.styles-main__hard-game-mode--p_RuZ {\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 21px;\r\n    background-color: #ffa500;\r\n    box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 125px;\r\n    height: 70px;\r\n    font-size: 22px;\r\n    font-family: cosmo;\r\n}\r\n\r\n.styles-main__hard-game-mode--p_RuZ:hover {\r\n    cursor: pointer;\r\n    background-color: rgb(150, 115, 55);\r\n}\r\n\r\n.styles-main__rage-game-mode--3BemQ{\r\n    font-weight: 700;\r\n    text-decoration: none;\r\n    text-shadow: 0 -1px 2px rgba(0,0,0,.2);\r\n    padding: .5em 1em;\r\n    outline: none;\r\n    border-radius: 21px;\r\n    background-color: #ff0000;\r\n    box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);\r\n    transition: .2s ease-in-out;\r\n    width: 134px;\r\n    height: 70px;\r\n    font-size: 22px;\r\n    font-family: cosmo;\r\n}\r\n\r\n.styles-main__rage-game-mode--3BemQ:hover {\r\n    cursor: pointer;\r\n    background-color: rgb(143, 46, 46);\r\n}\r\n\r\n.styles-main__game-mode-text--14g_3 {\r\n    color: white;\r\n}\r\n\r\n.styles-main__score-shower--2pMqe {\r\n    color: white;\r\n    position: absolute;\r\n    left: 120px;\r\n}\r\n\r\n", ""]);
 
 // exports
-
+exports.locals = {
+	"score-bar": "styles-main__score-bar--_iiz-",
+	"dead-indicator": "styles-main__dead-indicator--ZZr2k",
+	"score-indicator": "styles-main__score-indicator--2wehh",
+	"menu-button": "styles-main__menu-button--3rxYJ",
+	"play-menu": "styles-main__play-menu--2KCTF",
+	"game-name": "styles-main__game-name--3OjVG",
+	"play-button": "styles-main__play-button--1Ikw9",
+	"controls-container": "styles-main__controls-container--3eEYt",
+	"controls-arrows": "styles-main__controls-arrows--kVpFl",
+	"arrows-img": "styles-main__arrows-img--35NoO",
+	"container": "styles-main__container--IzipT",
+	"contorls-name": "styles-main__contorls-name--3iN_Z",
+	"arrows-info": "styles-main__arrows-info--26Iea",
+	"controls-spacebar": "styles-main__controls-spacebar--33BoR",
+	"spacebar-img": "styles-main__spacebar-img--2DEs_",
+	"spacebar-info": "styles-main__spacebar-info--2bxdk",
+	"about-container": "styles-main__about-container--2YBTI",
+	"about-name": "styles-main__about-name--34xNz",
+	"screenshots-container": "styles-main__screenshots-container--1iWs8",
+	"first-screenshot": "styles-main__first-screenshot--Ycw0M",
+	"second-screenshot": "styles-main__second-screenshot--2noAI",
+	"about-info": "styles-main__about-info--2n9yj",
+	"warning-info": "styles-main__warning-info--3lBre",
+	"dev-info-container": "styles-main__dev-info-container--xoP-Q",
+	"dev-heading": "styles-main__dev-heading--1H4L2",
+	"dev-img": "styles-main__dev-img--2Aapt",
+	"dev-name": "styles-main__dev-name--1hvtj",
+	"dev-info": "styles-main__dev-info--2hCqO",
+	"choosed-game-mode": "styles-main__choosed-game-mode--2fVtc",
+	"choosed-game-mode-container": "styles-main__choosed-game-mode-container--3ZsD9",
+	"easy-game-mode": "styles-main__easy-game-mode--2ch3v",
+	"medium-game-mode": "styles-main__medium-game-mode--1Scv9",
+	"hard-game-mode": "styles-main__hard-game-mode--p_RuZ",
+	"rage-game-mode": "styles-main__rage-game-mode--3BemQ",
+	"game-mode-text": "styles-main__game-mode-text--14g_3",
+	"score-shower": "styles-main__score-shower--2pMqe"
+};
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports) {
 
 /*
@@ -74969,483 +74975,16 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "fonts/467.ttf";
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "images/space-background.png";
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-
-var stylesInDom = {};
-
-var	memoize = function (fn) {
-	var memo;
-
-	return function () {
-		if (typeof memo === "undefined") memo = fn.apply(this, arguments);
-		return memo;
-	};
-};
-
-var isOldIE = memoize(function () {
-	// Test for IE <= 9 as proposed by Browserhacks
-	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
-	// Tests for existence of standard globals is to allow style-loader
-	// to operate correctly into non-standard environments
-	// @see https://github.com/webpack-contrib/style-loader/issues/177
-	return window && document && document.all && !window.atob;
-});
-
-var getElement = (function (fn) {
-	var memo = {};
-
-	return function(selector) {
-		if (typeof memo[selector] === "undefined") {
-			var styleTarget = fn.call(this, selector);
-			// Special case to return head of iframe instead of iframe itself
-			if (styleTarget instanceof window.HTMLIFrameElement) {
-				try {
-					// This will throw an exception if access to iframe is blocked
-					// due to cross-origin restrictions
-					styleTarget = styleTarget.contentDocument.head;
-				} catch(e) {
-					styleTarget = null;
-				}
-			}
-			memo[selector] = styleTarget;
-		}
-		return memo[selector]
-	};
-})(function (target) {
-	return document.querySelector(target)
-});
-
-var singleton = null;
-var	singletonCounter = 0;
-var	stylesInsertedAtTop = [];
-
-var	fixUrls = __webpack_require__(15);
-
-module.exports = function(list, options) {
-	if (typeof DEBUG !== "undefined" && DEBUG) {
-		if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
-	}
-
-	options = options || {};
-
-	options.attrs = typeof options.attrs === "object" ? options.attrs : {};
-
-	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-	// tags it will allow on a page
-	if (!options.singleton && typeof options.singleton !== "boolean") options.singleton = isOldIE();
-
-	// By default, add <style> tags to the <head> element
-	if (!options.insertInto) options.insertInto = "head";
-
-	// By default, add <style> tags to the bottom of the target
-	if (!options.insertAt) options.insertAt = "bottom";
-
-	var styles = listToStyles(list, options);
-
-	addStylesToDom(styles, options);
-
-	return function update (newList) {
-		var mayRemove = [];
-
-		for (var i = 0; i < styles.length; i++) {
-			var item = styles[i];
-			var domStyle = stylesInDom[item.id];
-
-			domStyle.refs--;
-			mayRemove.push(domStyle);
-		}
-
-		if(newList) {
-			var newStyles = listToStyles(newList, options);
-			addStylesToDom(newStyles, options);
-		}
-
-		for (var i = 0; i < mayRemove.length; i++) {
-			var domStyle = mayRemove[i];
-
-			if(domStyle.refs === 0) {
-				for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
-
-				delete stylesInDom[domStyle.id];
-			}
-		}
-	};
-};
-
-function addStylesToDom (styles, options) {
-	for (var i = 0; i < styles.length; i++) {
-		var item = styles[i];
-		var domStyle = stylesInDom[item.id];
-
-		if(domStyle) {
-			domStyle.refs++;
-
-			for(var j = 0; j < domStyle.parts.length; j++) {
-				domStyle.parts[j](item.parts[j]);
-			}
-
-			for(; j < item.parts.length; j++) {
-				domStyle.parts.push(addStyle(item.parts[j], options));
-			}
-		} else {
-			var parts = [];
-
-			for(var j = 0; j < item.parts.length; j++) {
-				parts.push(addStyle(item.parts[j], options));
-			}
-
-			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
-		}
-	}
-}
-
-function listToStyles (list, options) {
-	var styles = [];
-	var newStyles = {};
-
-	for (var i = 0; i < list.length; i++) {
-		var item = list[i];
-		var id = options.base ? item[0] + options.base : item[0];
-		var css = item[1];
-		var media = item[2];
-		var sourceMap = item[3];
-		var part = {css: css, media: media, sourceMap: sourceMap};
-
-		if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
-		else newStyles[id].parts.push(part);
-	}
-
-	return styles;
-}
-
-function insertStyleElement (options, style) {
-	var target = getElement(options.insertInto)
-
-	if (!target) {
-		throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
-	}
-
-	var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
-
-	if (options.insertAt === "top") {
-		if (!lastStyleElementInsertedAtTop) {
-			target.insertBefore(style, target.firstChild);
-		} else if (lastStyleElementInsertedAtTop.nextSibling) {
-			target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
-		} else {
-			target.appendChild(style);
-		}
-		stylesInsertedAtTop.push(style);
-	} else if (options.insertAt === "bottom") {
-		target.appendChild(style);
-	} else if (typeof options.insertAt === "object" && options.insertAt.before) {
-		var nextSibling = getElement(options.insertInto + " " + options.insertAt.before);
-		target.insertBefore(style, nextSibling);
-	} else {
-		throw new Error("[Style Loader]\n\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\n Must be 'top', 'bottom', or Object.\n (https://github.com/webpack-contrib/style-loader#insertat)\n");
-	}
-}
-
-function removeStyleElement (style) {
-	if (style.parentNode === null) return false;
-	style.parentNode.removeChild(style);
-
-	var idx = stylesInsertedAtTop.indexOf(style);
-	if(idx >= 0) {
-		stylesInsertedAtTop.splice(idx, 1);
-	}
-}
-
-function createStyleElement (options) {
-	var style = document.createElement("style");
-
-	options.attrs.type = "text/css";
-
-	addAttrs(style, options.attrs);
-	insertStyleElement(options, style);
-
-	return style;
-}
-
-function createLinkElement (options) {
-	var link = document.createElement("link");
-
-	options.attrs.type = "text/css";
-	options.attrs.rel = "stylesheet";
-
-	addAttrs(link, options.attrs);
-	insertStyleElement(options, link);
-
-	return link;
-}
-
-function addAttrs (el, attrs) {
-	Object.keys(attrs).forEach(function (key) {
-		el.setAttribute(key, attrs[key]);
-	});
-}
-
-function addStyle (obj, options) {
-	var style, update, remove, result;
-
-	// If a transform function was defined, run it on the css
-	if (options.transform && obj.css) {
-	    result = options.transform(obj.css);
-
-	    if (result) {
-	    	// If transform returns a value, use that instead of the original css.
-	    	// This allows running runtime transformations on the css.
-	    	obj.css = result;
-	    } else {
-	    	// If the transform function returns a falsy value, don't add this css.
-	    	// This allows conditional loading of css
-	    	return function() {
-	    		// noop
-	    	};
-	    }
-	}
-
-	if (options.singleton) {
-		var styleIndex = singletonCounter++;
-
-		style = singleton || (singleton = createStyleElement(options));
-
-		update = applyToSingletonTag.bind(null, style, styleIndex, false);
-		remove = applyToSingletonTag.bind(null, style, styleIndex, true);
-
-	} else if (
-		obj.sourceMap &&
-		typeof URL === "function" &&
-		typeof URL.createObjectURL === "function" &&
-		typeof URL.revokeObjectURL === "function" &&
-		typeof Blob === "function" &&
-		typeof btoa === "function"
-	) {
-		style = createLinkElement(options);
-		update = updateLink.bind(null, style, options);
-		remove = function () {
-			removeStyleElement(style);
-
-			if(style.href) URL.revokeObjectURL(style.href);
-		};
-	} else {
-		style = createStyleElement(options);
-		update = applyToTag.bind(null, style);
-		remove = function () {
-			removeStyleElement(style);
-		};
-	}
-
-	update(obj);
-
-	return function updateStyle (newObj) {
-		if (newObj) {
-			if (
-				newObj.css === obj.css &&
-				newObj.media === obj.media &&
-				newObj.sourceMap === obj.sourceMap
-			) {
-				return;
-			}
-
-			update(obj = newObj);
-		} else {
-			remove();
-		}
-	};
-}
-
-var replaceText = (function () {
-	var textStore = [];
-
-	return function (index, replacement) {
-		textStore[index] = replacement;
-
-		return textStore.filter(Boolean).join('\n');
-	};
-})();
-
-function applyToSingletonTag (style, index, remove, obj) {
-	var css = remove ? "" : obj.css;
-
-	if (style.styleSheet) {
-		style.styleSheet.cssText = replaceText(index, css);
-	} else {
-		var cssNode = document.createTextNode(css);
-		var childNodes = style.childNodes;
-
-		if (childNodes[index]) style.removeChild(childNodes[index]);
-
-		if (childNodes.length) {
-			style.insertBefore(cssNode, childNodes[index]);
-		} else {
-			style.appendChild(cssNode);
-		}
-	}
-}
-
-function applyToTag (style, obj) {
-	var css = obj.css;
-	var media = obj.media;
-
-	if(media) {
-		style.setAttribute("media", media)
-	}
-
-	if(style.styleSheet) {
-		style.styleSheet.cssText = css;
-	} else {
-		while(style.firstChild) {
-			style.removeChild(style.firstChild);
-		}
-
-		style.appendChild(document.createTextNode(css));
-	}
-}
-
-function updateLink (link, options, obj) {
-	var css = obj.css;
-	var sourceMap = obj.sourceMap;
-
-	/*
-		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
-		and there is no publicPath defined then lets turn convertToAbsoluteUrls
-		on by default.  Otherwise default to the convertToAbsoluteUrls option
-		directly
-	*/
-	var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
-
-	if (options.convertToAbsoluteUrls || autoFixUrls) {
-		css = fixUrls(css);
-	}
-
-	if (sourceMap) {
-		// http://stackoverflow.com/a/26603875
-		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
-	}
-
-	var blob = new Blob([css], { type: "text/css" });
-
-	var oldSrc = link.href;
-
-	link.href = URL.createObjectURL(blob);
-
-	if(oldSrc) URL.revokeObjectURL(oldSrc);
-}
-
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports) {
-
-
-/**
- * When source maps are enabled, `style-loader` uses a link element with a data-uri to
- * embed the css on the page. This breaks all relative urls because now they are relative to a
- * bundle instead of the current page.
- *
- * One solution is to only use full urls, but that may be impossible.
- *
- * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
- *
- * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
- *
- */
-
-module.exports = function (css) {
-  // get current location
-  var location = typeof window !== "undefined" && window.location;
-
-  if (!location) {
-    throw new Error("fixUrls requires window.location");
-  }
-
-	// blank or null?
-	if (!css || typeof css !== "string") {
-	  return css;
-  }
-
-  var baseUrl = location.protocol + "//" + location.host;
-  var currentDir = baseUrl + location.pathname.replace(/\/[^\/]*$/, "/");
-
-	// convert each url(...)
-	/*
-	This regular expression is just a way to recursively match brackets within
-	a string.
-
-	 /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
-	   (  = Start a capturing group
-	     (?:  = Start a non-capturing group
-	         [^)(]  = Match anything that isn't a parentheses
-	         |  = OR
-	         \(  = Match a start parentheses
-	             (?:  = Start another non-capturing groups
-	                 [^)(]+  = Match anything that isn't a parentheses
-	                 |  = OR
-	                 \(  = Match a start parentheses
-	                     [^)(]*  = Match anything that isn't a parentheses
-	                 \)  = Match a end parentheses
-	             )  = End Group
-              *\) = Match anything and then a close parens
-          )  = Close non-capturing group
-          *  = Match anything
-       )  = Close capturing group
-	 \)  = Match a close parens
-
-	 /gi  = Get all matches, not the first.  Be case insensitive.
-	 */
-	var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function(fullMatch, origUrl) {
-		// strip quotes (if they exist)
-		var unquotedOrigUrl = origUrl
-			.trim()
-			.replace(/^"(.*)"$/, function(o, $1){ return $1; })
-			.replace(/^'(.*)'$/, function(o, $1){ return $1; });
-
-		// already a full url? no change
-		if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/)/i.test(unquotedOrigUrl)) {
-		  return fullMatch;
-		}
-
-		// convert the url to a full url
-		var newUrl;
-
-		if (unquotedOrigUrl.indexOf("//") === 0) {
-		  	//TODO: should we add protocol?
-			newUrl = unquotedOrigUrl;
-		} else if (unquotedOrigUrl.indexOf("/") === 0) {
-			// path should be relative to the base url
-			newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
-		} else {
-			// path should be relative to current directory
-			newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ""); // Strip leading './'
-		}
-
-		// send back the fixed url(...)
-		return "url(" + JSON.stringify(newUrl) + ")";
-	});
-
-	// send back the fixed css
-	return fixedCss;
-};
-
 
 /***/ })
 /******/ ]);
